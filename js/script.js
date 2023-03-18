@@ -157,39 +157,65 @@
 // 	return newObj;
 // };
 
-
 ///**
 // *? Зробіть знижку 20% на всі фрукти у масиві
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
-function calcFruits(arr) {
-   /* const arrNew = [];
-    let i = 0;
-    for (let elem of arr) {
-        i += 1;
-        arrNew.push({
-            ...elem,
-            price: elem.price * 0.8,
-            //id : Date.now(),
-            id: i,
-        })
-    }*/
-    let i = 0;
-    const arrNew = arr.map(item => {
-        i += 1;
-        return { ...item,
-            price: item.price * 0.8,
-            //id : Date.now(),
-            id: i,
-        }
- })
-    return arrNew;
-}
-console.table(calcFruits(fruits));
+// function calcFruits(arr) {
+//    /* const arrNew = [];
+//     let i = 0;
+//     for (let elem of arr) {
+//         i += 1;
+//         arrNew.push({
+//             ...elem,
+//             price: elem.price * 0.8,
+//             //id : Date.now(),
+//             id: i,
+//         })
+//     }*/
+//     let i = 0;
+//     const arrNew = arr.map(item => {
+//         i += 1;
+//         return { ...item,
+//             price: item.price * 0.8,
+//             //id : Date.now(),
+//             id: i,
+//         }
+//  })
+//     return arrNew;
+// }
+// console.table(calcFruits(fruits));
+
+// TODO:=============================================
+// Напиши функцію конструктор User для створення користувача з такими властивостями
+// a. userName - ім'я, рядок
+// b. age - вік, число
+// c. numbersOfPost - кількість постів, число
+// d. клас очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+
+// Додай метод getInfo(), який повертає рядок:
+// `Користувачеві ${} ${} років і в нього ${} публікацій.`
+
+// function User({ userName, age, numbersOfPost }) {
+// 	this.userName = userName;
+// 	this.age = age;
+// 	this.numbersOfPost = numbersOfPost;
+// 	this.getInfo = function () {
+// 		return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`;
+// 	};
+// }
+
+// const newUser = new User({
+// 	userName: "Hennadii",
+// 	age: 28,
+// 	numbersOfPost: 999,
+// });
+
+// console.log(newUser.getInfo());
