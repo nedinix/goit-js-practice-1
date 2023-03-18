@@ -224,3 +224,63 @@ function crTags(arr) {
 }
 
 console.log(crTags(tweets));
+=======
+// TODO:=============================================
+// Напиши функцію конструктор User для створення користувача з такими властивостями
+// a. userName - ім'я, рядок
+// b. age - вік, число
+// c. numbersOfPost - кількість постів, число
+// d. клас очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+
+// Додай метод getInfo(), який повертає рядок:
+// `Користувачеві ${} ${} років і в нього ${} публікацій.`
+
+// function User({ userName, age, numbersOfPost }) {
+// 	this.userName = userName;
+// 	this.age = age;
+// 	this.numbersOfPost = numbersOfPost;
+// 	this.getInfo = function () {
+// 		return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`;
+// 	};
+// }
+
+// const newUser = new User({
+// 	userName: "Hennadii",
+// 	age: 28,
+// 	numbersOfPost: 999,
+// });
+// console.log(newUser.getInfo());
+//++++++++++++++++++++++++++++++++++++++ Task 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Напиши функцію конструктор Storage який створює об'єкти
+//Для управління складом товарів.
+//При виклику отримуватиме один агрумент - початковий масив товарів,
+//і записувати їх у властивість items.
+//Додай методи класу:
+//getItems() - повертайте масив товарів
+//addItems(item) - отримує новий товар та додає його до поточних
+//removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+
+/*function Storage(arr) {
+    this.items = arr;
+    this.getItems = function () {
+        return this.items;
+    };
+    this.addItems = function (item) {
+        this.items.push(item);
+    };
+}
+Storage.prototype.removeItem = function (item) {
+    const idx = this.items.indexOf(item);
+    if (idx !== -1) { this.items.splice(idx, 1) };
+}
+const newStorage = new Storage(["one", "two", "three"]);
+
+console.log(newStorage.getItems());
+
+newStorage.addItems("four");
+console.log(newStorage.getItems());
+
+newStorage.removeItem("five");
+console.log(newStorage.getItems());
+console.log(Storage);
+console.log(newStorage);*/
