@@ -193,6 +193,38 @@
 // }
 // console.table(calcFruits(fruits));
 
+// tasr next
+
+//TODO:==============================================
+/**
+*? Поверніть об'єкт, в якому вказано кількість тегів.
+*? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+
+ */
+const tweets = [
+  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+  { id: '001', likes: 2, tags: ['html', 'css'] },
+  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+  { id: '003', likes: 8, tags: ['css', 'react'] },
+  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+];
+
+function crTags(arr) {
+  const obj = {};
+  const newObj = arr
+    .flatMap((el) => el.tags)
+    .reduce((acc, tag) => {
+      return {
+        ...acc,
+        [tag]: acc[tag] ? (acc[tag] += 1) : 1,
+      };
+    }, {});
+
+  return newObj;
+}
+
+console.log(crTags(tweets));
+=======
 // TODO:=============================================
 // Напиши функцію конструктор User для створення користувача з такими властивостями
 // a. userName - ім'я, рядок
