@@ -217,5 +217,38 @@
 // 	age: 28,
 // 	numbersOfPost: 999,
 // });
-
 // console.log(newUser.getInfo());
+//++++++++++++++++++++++++++++++++++++++ Task 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Напиши функцію конструктор Storage який створює об'єкти
+//Для управління складом товарів.
+//При виклику отримуватиме один агрумент - початковий масив товарів,
+//і записувати їх у властивість items.
+//Додай методи класу:
+//getItems() - повертайте масив товарів
+//addItems(item) - отримує новий товар та додає його до поточних
+//removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+
+/*function Storage(arr) {
+    this.items = arr;
+    this.getItems = function () {
+        return this.items;
+    };
+    this.addItems = function (item) {
+        this.items.push(item);
+    };
+}
+Storage.prototype.removeItem = function (item) {
+    const idx = this.items.indexOf(item);
+    if (idx !== -1) { this.items.splice(idx, 1) };
+}
+const newStorage = new Storage(["one", "two", "three"]);
+
+console.log(newStorage.getItems());
+
+newStorage.addItems("four");
+console.log(newStorage.getItems());
+
+newStorage.removeItem("five");
+console.log(newStorage.getItems());
+console.log(Storage);
+console.log(newStorage);*/
