@@ -4,12 +4,12 @@
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
 
-const inputAlertEl = document.querySelector("#alertInput");
-const btnAlertEl = document.querySelector("#alertButton");
+// const inputAlertEl = document.querySelector("#alertInput");
+// const btnAlertEl = document.querySelector("#alertButton");
 
-btnAlertEl.addEventListener("click", () => {
-	alert(inputAlertEl.value);
-});
+// btnAlertEl.addEventListener("click", () => {
+// 	alert(inputAlertEl.value);
+// });
 
 //TODO:==============================================
 /*
@@ -17,6 +17,19 @@ btnAlertEl.addEventListener("click", () => {
 Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
+
+const leftSwapInputEl = document.querySelector('#leftSwapInput');
+const rightSwapInputEl = document.querySelector('#rightSwapInput');
+const swapBtnEl = document.querySelector('#swapButton');
+
+swapBtnEl.addEventListener('click', change);
+
+function change() {
+  const input1 = leftSwapInputEl.value;
+  const input2 = rightSwapInputEl.value;
+  leftSwapInputEl.value = input2;
+  rightSwapInputEl.value = input1;
+}
 
 //TODO:==============================================
 /*
