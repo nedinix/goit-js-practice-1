@@ -18,7 +18,7 @@
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
-const leftSwapInputEl = document.querySelector('#leftSwapInput');
+/*const leftSwapInputEl = document.querySelector('#leftSwapInput');
 const rightSwapInputEl = document.querySelector('#rightSwapInput');
 const swapBtnEl = document.querySelector('#swapButton');
 
@@ -29,7 +29,7 @@ function change() {
   const input2 = rightSwapInputEl.value;
   leftSwapInputEl.value = input2;
   rightSwapInputEl.value = input1;
-}
+}*/
 
 //TODO:==============================================
 /*
@@ -38,6 +38,20 @@ function change() {
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
+const inputEl = document.querySelector("#passwordInput");
+const btnEl = document.querySelector("#passwordButton");
+btnEl.addEventListener('click', onClick);
+
+function onClick() {
+  if (inputEl.getAttribute('type') === 'text') {
+    inputEl.setAttribute('type', 'password');
+    btnEl.textContent = "Показать";
+  } else {
+    inputEl.setAttribute('type', 'text');
+    btnEl.textContent = "Скрыть";
+  }
+}
+
 
 //TODO:==============================================
 /*
