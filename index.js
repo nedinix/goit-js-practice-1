@@ -79,10 +79,11 @@ btnIncreaseEl.addEventListener("click", () => {
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
 
-// const placeRef = document.querySelector("#place");
-// addEventListener("click", (e) => {
-//   console.log(e.target === placeRef ? true : false);
-// });
+const placeRef = document.querySelector("#place");
+addEventListener("click", (e) => {
+  console.dir(e);
+  console.log(e.target === placeRef ? true : false);
+});
 
 //TODO:==============================================
 /*
