@@ -52,12 +52,26 @@ function change() {
 //   }
 // }
 
-
 //TODO:==============================================
 /*
 Завдання 4
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
+
+const boxEl = document.querySelector("#box");
+const btnDecreaseEl = document.querySelector("#decrease");
+const btnIncreaseEl = document.querySelector("#increase");
+
+btnDecreaseEl.addEventListener("click", () => {
+  let currentWidth = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = currentWidth - 10 + "px";
+  boxEl.style.height = currentWidth - 10 + "px";
+});
+btnIncreaseEl.addEventListener("click", () => {
+  let currentWidth = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = currentWidth + 10 + "px";
+  boxEl.style.height = currentWidth + 10 + "px";
+});
 
 //TODO:==============================================
 /*
