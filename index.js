@@ -58,20 +58,20 @@ function change() {
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
 
-const boxEl = document.querySelector("#box");
-const btnDecreaseEl = document.querySelector("#decrease");
-const btnIncreaseEl = document.querySelector("#increase");
+// const boxEl = document.querySelector("#box");
+// const btnDecreaseEl = document.querySelector("#decrease");
+// const btnIncreaseEl = document.querySelector("#increase");
 
-btnDecreaseEl.addEventListener("click", () => {
-  let currentWidth = parseInt(getComputedStyle(boxEl).width);
-  boxEl.style.width = currentWidth - 10 + "px";
-  boxEl.style.height = currentWidth - 10 + "px";
-});
-btnIncreaseEl.addEventListener("click", () => {
-  let currentWidth = parseInt(getComputedStyle(boxEl).width);
-  boxEl.style.width = currentWidth + 10 + "px";
-  boxEl.style.height = currentWidth + 10 + "px";
-});
+// btnDecreaseEl.addEventListener("click", () => {
+//   let currentWidth = parseInt(getComputedStyle(boxEl).width);
+//   boxEl.style.width = currentWidth - 10 + "px";
+//   boxEl.style.height = currentWidth - 10 + "px";
+// });
+// btnIncreaseEl.addEventListener("click", () => {
+//   let currentWidth = parseInt(getComputedStyle(boxEl).width);
+//   boxEl.style.width = currentWidth + 10 + "px";
+//   boxEl.style.height = currentWidth + 10 + "px";
+// });
 
 //TODO:==============================================
 /*
@@ -79,11 +79,11 @@ btnIncreaseEl.addEventListener("click", () => {
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
 
-const placeRef = document.querySelector("#place");
-addEventListener("click", (e) => {
-  console.dir(e);
-  console.log(e.target === placeRef ? true : false);
-});
+// const placeRef = document.querySelector("#place");
+// addEventListener("click", (e) => {
+//   console.dir(e);
+//   console.log(e.target === placeRef ? true : false);
+// });
 
 //TODO:==============================================
 /*
@@ -91,6 +91,18 @@ addEventListener("click", (e) => {
 Натиснувши кнопку "Подвоювати", збільшити значення
 у кожному елементі списку у 2 рази
 */
+
+// const listEl = document.querySelectorAll(".listItem");
+// const btnEl = document.querySelector("#double");
+
+// btnEl.addEventListener("click", onDoubleClick);
+
+// function onDoubleClick() {
+// 	listEl.forEach((item) => {
+// 		console.log(item.textContent);
+// 		item.textContent = Number(item.textContent) * 2;
+// 	});
+// }
 
 //TODO:==============================================
 /*
