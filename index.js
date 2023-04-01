@@ -38,26 +38,40 @@ function change() {
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
-const inputEl = document.querySelector("#passwordInput");
-const btnEl = document.querySelector("#passwordButton");
-btnEl.addEventListener('click', onClick);
+// const inputEl = document.querySelector("#passwordInput");
+// const btnEl = document.querySelector("#passwordButton");
+// btnEl.addEventListener('click', onClick);
 
-function onClick() {
-  if (inputEl.getAttribute('type') === 'text') {
-    inputEl.setAttribute('type', 'password');
-    btnEl.textContent = "Показать";
-  } else {
-    inputEl.setAttribute('type', 'text');
-    btnEl.textContent = "Скрыть";
-  }
-}
-
+// function onClick() {
+//   if (inputEl.getAttribute('type') === 'text') {
+//     inputEl.setAttribute('type', 'password');
+//     btnEl.textContent = "Показать";
+//   } else {
+//     inputEl.setAttribute('type', 'text');
+//     btnEl.textContent = "Скрыть";
+//   }
+// }
 
 //TODO:==============================================
 /*
 Завдання 4
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
+
+const boxEl = document.querySelector("#box");
+const btnDecreaseEl = document.querySelector("#decrease");
+const btnIncreaseEl = document.querySelector("#increase");
+
+btnDecreaseEl.addEventListener("click", () => {
+  let currentWidth = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = currentWidth - 10 + "px";
+  boxEl.style.height = currentWidth - 10 + "px";
+});
+btnIncreaseEl.addEventListener("click", () => {
+  let currentWidth = parseInt(getComputedStyle(boxEl).width);
+  boxEl.style.width = currentWidth + 10 + "px";
+  boxEl.style.height = currentWidth + 10 + "px";
+});
 
 //TODO:==============================================
 /*
