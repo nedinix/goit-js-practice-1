@@ -38,19 +38,19 @@ function change() {
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
-const inputEl = document.querySelector("#passwordInput");
-const btnEl = document.querySelector("#passwordButton");
-btnEl.addEventListener('click', onClick);
+// const inputEl = document.querySelector("#passwordInput");
+// const btnEl = document.querySelector("#passwordButton");
+// btnEl.addEventListener('click', onClick);
 
-function onClick() {
-  if (inputEl.getAttribute('type') === 'text') {
-    inputEl.setAttribute('type', 'password');
-    btnEl.textContent = "Показать";
-  } else {
-    inputEl.setAttribute('type', 'text');
-    btnEl.textContent = "Скрыть";
-  }
-}
+// function onClick() {
+//   if (inputEl.getAttribute('type') === 'text') {
+//     inputEl.setAttribute('type', 'password');
+//     btnEl.textContent = "Показать";
+//   } else {
+//     inputEl.setAttribute('type', 'text');
+//     btnEl.textContent = "Скрыть";
+//   }
+// }
 
 
 //TODO:==============================================
@@ -65,10 +65,11 @@ function onClick() {
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
 
-// const placeRef = document.querySelector("#place");
-// addEventListener("click", (e) => {
-//   console.log(e.target === placeRef ? true : false);
-// });
+const placeRef = document.querySelector("#place");
+addEventListener("click", (e) => {
+  console.dir(e);
+  console.log(e.target === placeRef ? true : false);
+});
 
 //TODO:==============================================
 /*
